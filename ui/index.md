@@ -16,6 +16,10 @@ contains one or more properties, with `v-bind` support.
 A smart avatar component. When image is not available, it will create a colorful
 text based avatar.
 
++ `alt`: text based username
++ `src`: image source url
++ `size`: number for the size, e.g. `48`
+
 {% highlight html %}
 <vui-avatar alt="name" src="image.png"></vui-avatar>
 {% endhighlight %}
@@ -25,6 +29,7 @@ text based avatar.
 <vui-avatar></vui-avatar>
 <vui-avatar alt="lepture"></vui-avatar>
 <vui-avatar alt="Hsiaoming Yang"></vui-avatar>
+<vui-avatar alt="李太白"></vui-avatar>
 <vui-avatar alt="lepture" src="https://avatars0.githubusercontent.com/u/290496?v=3&s=80"></vui-avatar>
 </div>
 {% endraw %}
@@ -39,8 +44,11 @@ A customized toggle checkbox. It will render a standard
 `<input type="checkbox">` which can be used in a form directly,
 so that you can give it a `name` property.
 
++ `name`: name property of the input
++ `checked`: is toggle on or off
+
 {% highlight html %}
-<vui-toggle name="wifi"></vui-toggle>
+<vui-toggle name="wifi" checked></vui-toggle>
 {% endhighlight %}
 
 {% raw %}
@@ -57,6 +65,12 @@ A customized range input. It will render a standard
 `<input type="range">` which can be used in a form directly,
 so that you can give it a `name` property.
 
++ `name`: name property of the input
++ `min`: min property for range input
++ `max`: max property for range input
++ `step`: step property for range input
++ `value`: value property for range input
+
 {% highlight html %}
 <vui-range-slider name="power"></vui-range-slider>
 {% endhighlight %}
@@ -72,6 +86,8 @@ so that you can give it a `name` property.
 
 A button designed for menu icon. You can toggle the status with a click.
 The menu button has only one property `checked`.
+
++ `checked`: is menu button open
 
 {% highlight html %}
 <vui-menu-button></vui-menu-button>
