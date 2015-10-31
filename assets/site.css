@@ -27,6 +27,10 @@ code, pre {
   font-size: 0.8em;
   background-color: #f8f8f8;
 }
+pre code {
+  white-space: pre;
+  padding: 0;
+}
 #header {
   padding: 1.4em 4.8em;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.25), 0 0 6px rgba(0, 0, 0, 0.1);
@@ -66,6 +70,12 @@ code, pre {
   margin: 0;
   font-size: 15px;
 }
+#markdown-toc ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 1em;
+  font-size: 0.9em;
+}
 .fixed #markdown-toc {
   position: fixed;
 }
@@ -88,17 +98,22 @@ code, pre {
 }
 .content h1 {
   margin: 0 0 1em;
-  padding-bottom: 0.7em;
-  border-bottom: 1px solid #ddd;
+  padding-bottom: 0;
 }
 .content h2 {
-  margin: 3em 0 1.2em;
+  font-size: 1.4em;
+  margin: 3em 0 1em;
+  padding-bottom: 0.4em;
+  border-bottom: 1px solid #ddd;
+}
+.content h3 {
+  margin: 1.8em 0 1em;
   font-size: 1.2em;
 }
 .content .example {
   position: relative;
   margin: 1.8em 0;
-  padding: 1.8em;
+  padding: 1.2em 1.6em;
   border: 1px solid rgba(100, 100, 100, 0.1);
   border-radius: 3px;
 }
@@ -109,6 +124,7 @@ code, pre {
   padding: 1em 1.6em;
 }
 .highlight code {
+  color: #555;
   font-size: 15px;
 }
 .highlight code:before,
@@ -124,4 +140,8 @@ code, pre {
 }
 .content .example:before {
   content: 'DEMO';
+}
+.highlight + .example {
+  margin-top: -1.2em;
+  border-radius: 0 0 2px 2px;
 }
