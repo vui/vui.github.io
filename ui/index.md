@@ -12,26 +12,26 @@ layout: vue
 
 Avatar is special designed, it can be an image, it can be a username.
 
-```html
-<avatar alt="username" src="/path/to/image.png"></avatar>
-```
+{% highlight html %}
+<vui-avatar alt="name" src="image.png"></vui-avatar>
+{% endhighlight %}
 
 ## Toggle
 
 Toggle for checkbox.
 
-```html
-<toggle name="wifi"></toggle>
-```
+{% highlight html %}
+<vui-toggle name="wifi"></vui-toggle>
+{% endhighlight %}
 
 ## Menu Button
 
-```html
-<menu-button :open="isOpen"></menu-button>
-```
+{% highlight html %}
+<vui-menu-button></vui-menu-button>
+{% endhighlight %}
 
 ## Range Slider
 
-```html
-<range-slider name="power"></range-slider>
-```
+{% highlight html %}
+<vui-range-slider name="power"></vui-range-slider>
+{% endhighlight %}
