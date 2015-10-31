@@ -35,6 +35,11 @@ pre code {
   padding: 1.4em 4.8em;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.25), 0 0 6px rgba(0, 0, 0, 0.1);
 }
+#header:after {
+  display: table;
+  content: '';
+  clear: both;
+}
 .nav {
   list-style-type: none;
   padding: 0;
@@ -54,6 +59,14 @@ pre code {
 }
 .nav a:hover {
   border-color: #42b983;
+}
+#header .nav {
+  float: right;
+}
+#header .logo {
+  float: left;
+  color: rgba(66, 185, 131, 0.8);
+  font: 300 normal 24px/40px sans-serif;
 }
 
 #main {
