@@ -66,6 +66,9 @@ code, pre {
   margin: 0;
   font-size: 15px;
 }
+.fixed #markdown-toc {
+  position: fixed;
+}
 #markdown-toc a {
   color: #7f8c8d;
   text-decoration: none;
@@ -99,7 +102,7 @@ code, pre {
   border: 1px solid rgba(100, 100, 100, 0.1);
   border-radius: 3px;
 }
-.highlight { 
+.highlight {
   position: relative;
   background: #f8f8f8;
   margin: 1.2em 0;
