@@ -1,9 +1,7 @@
 name: VUI
 
 markdown: kramdown
-highlighter: rouge
 
 kramdown:
   input: GFM
   toc_levels: 2..3
-  syntax_highlighter: rouge

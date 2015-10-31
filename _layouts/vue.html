@@ -6,8 +6,9 @@
   <title>{{ page.title }}</title>
   <link rel="stylesheet" href="/css/syntax.css">
   <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="/assets/app.css">
   <script src="/assets/vendor.js"></script>
-  <script src="/assets/vui.js"></script>
+  <script src="/assets/app.js"></script>
 </head>
 <body>
   {% include header.html %}
@@ -16,5 +17,10 @@
       {{ content }}
     </div>
   </div>
+  <script src="https://cdn.jsdelivr.net/g/highlight.js@8.9.1(highlight.min.js+languages/css.min.js+languages/javascript.min.js)"></script>
+  <script>
+    hljs.configure({classPrefix: '', languages: ['html', 'css', 'javascript']})
+    hljs.initHighlighting()
+  </script>
 </body>
 </html>
