@@ -20,6 +20,10 @@ text based avatar.
 + `src`: image source url
 + `size`: number for the size, e.g. `48`
 
+### Circle Avatar
+
+Default avatars are circled, size of 48px.
+
 {% highlight html %}
 <vui-avatar alt="name" src="image.png"></vui-avatar>
 {% endhighlight %}
@@ -27,7 +31,6 @@ text based avatar.
 {% raw %}
 <div class="example">
 <vui-avatar></vui-avatar>
-<vui-avatar alt="lepture"></vui-avatar>
 <vui-avatar alt="Hsiaoming Yang"></vui-avatar>
 <vui-avatar alt="李太白"></vui-avatar>
 <vui-avatar alt="lepture" src="https://avatars0.githubusercontent.com/u/290496?v=3&s=80"></vui-avatar>
@@ -36,6 +39,24 @@ text based avatar.
 
 The color is calculated by the username (aka `alt` property). If `alt` is not
 provided, it will render a pure black avatar.
+
+### Squared Avatar
+
+Add a class `squared` to make `<vui-avatar>` a squared avatar. It is not real
+squared, it has a `2px` border radius.
+
+{% highlight html %}
+<vui-avatar class="squared"></vui-avatar>
+{% endhighlight %}
+
+{% raw %}
+<div class="example">
+<vui-avatar class="squared"></vui-avatar>
+<vui-avatar class="squared" alt="Hsiaoming Yang"></vui-avatar>
+<vui-avatar class="squared" alt="李太白"></vui-avatar>
+<vui-avatar class="squared" alt="lepture" src="https://avatars0.githubusercontent.com/u/290496?v=3&s=80"></vui-avatar>
+</div>
+{% endraw %}
 
 
 ## Toggle
@@ -48,6 +69,7 @@ so that you can give it a `name` property.
 + `checked`: is toggle on or off
 
 {% highlight html %}
+<vui-toggle name="wifi"></vui-toggle>
 <vui-toggle name="wifi" checked></vui-toggle>
 {% endhighlight %}
 
@@ -71,6 +93,10 @@ so that you can give it a `name` property.
 + `step`: step property for range input
 + `value`: value property for range input
 
+### Pure Range
+
+A pure range is a `<input type="range">` wrapped in a `div`.
+
 {% highlight html %}
 <vui-range-slider name="power"></vui-range-slider>
 {% endhighlight %}
@@ -78,6 +104,28 @@ so that you can give it a `name` property.
 {% raw %}
 <div class="example">
 <vui-range-slider name="power"></vui-range-slider>
+</div>
+{% endraw %}
+
+
+### Range with Labels
+
+Range can contains two labels, one left one right, which can be
+specified with `slot` property.
+
+{% highlight html %}
+<vui-range-slider name="power">
+  <span slot="left">L</span>
+  <span slot="right">H</span>
+</vui-range-slider>
+{% endhighlight %}
+
+{% raw %}
+<div class="example">
+<vui-range-slider name="power">
+  <span slot="left">L</span>
+  <span slot="right">H</span>
+</vui-range-slider>
 </div>
 {% endraw %}
 
@@ -91,6 +139,7 @@ The menu button has only one property `checked`.
 
 {% highlight html %}
 <vui-menu-button></vui-menu-button>
+<vui-menu-button checked></vui-menu-button>
 {% endhighlight %}
 
 {% raw %}
@@ -99,3 +148,9 @@ The menu button has only one property `checked`.
 <vui-menu-button checked></vui-menu-button>
 </div>
 {% endraw %}
+
+You can example the menu with an inner text content.
+
+{% highlight html %}
+<vui-menu-button>Site Menu</vui-menu-button>
+{% endhighlight %}
