@@ -11,6 +11,102 @@ contains one or more properties, with `v-bind` support.
 * TOC
 {:toc}
 
+
+## Buttons
+
+Buttons are essential part of any mobile/desktop experiences. Create buttons
+with `.v-button` class.
+
+{% highlight html %}
+<button class="v-button">Default Button</button>
+<a class="v-button" role="button">A Tag Button</a>
+<button class="v-button v-button--white">White Button</button>
+<button class="v-button" disabled>Disabled Button</button>
+{% endhighlight %}
+
+{% raw %}
+<div class="example">
+<button class="v-button">Default Button</button>
+<a class="v-button" role="button">A Tag Button</a>
+<button class="v-button v-button--white">White Button</button>
+<button class="v-button" disabled>Disabled Button</button>
+</div>
+{% endraw %}
+
+
+### Block Button
+
+Block button is applied a `display: block` style. It will cover 100% of the
+parent block. Create block buttons by adding a `.v-button--block` class.
+
+{% highlight html %}
+<button class="v-button v-button--block">Block Button</button>
+{% endhighlight %}
+
+{% raw %}
+<div class="example">
+<button class="v-button v-button--block">Block Button</button>
+</div>
+{% endraw %}
+
+
+### Menu Button
+
+A button is designed for menu icon. You can toggle the status with a click.
+The menu button has only one property `checked`.
+
++ `checked`: is menu button open
+
+{% highlight html %}
+<vui-menu-button></vui-menu-button>
+<vui-menu-button checked></vui-menu-button>
+{% endhighlight %}
+
+{% raw %}
+<div class="example">
+<vui-menu-button></vui-menu-button>
+<vui-menu-button checked></vui-menu-button>
+</div>
+{% endraw %}
+
+You can example the menu with an inner text content.
+
+{% highlight html %}
+<vui-menu-button>Site Menu</vui-menu-button>
+{% endhighlight %}
+
+
+### Progress Button
+
+A progress button shows the current progress, it is useful for async form
+submition. Create them with `<vui-progress-button>`.
+
++ `progress`: current progress, can be a number between 0 to 100, or a percentage.
+
+{% highlight html %}
+<vui-progress-button progress="60%">
+  Text Content
+</vui-progress-button>
+{% endhighlight %}
+
+
+{% raw %}
+<div class="example">
+<vui-progress-button progress="60%">Text Content</vui-progress-button>
+<vui-progress-button class="v-button--white" progress="60%">Text Content</vui-progress-button>
+</div>
+{% endraw %}
+
+You can still add modifier classes for progress buttons, e.g. `.v-button--white`,
+`.v-button--block`.
+
+{% highlight html %}
+<vui-progress-button class="v-button--white" progress="60%">
+  Text Content
+</vui-progress-button>
+{% endhighlight %}
+
+
 ## Avatar
 
 A smart avatar component. When image is not available, it will create a colorful
@@ -42,19 +138,19 @@ provided, it will render a pure black avatar.
 
 ### Squared Avatar
 
-Add a class `squared` to make `<vui-avatar>` a squared avatar. It is not real
+Add a class `.v-avatar--squared` to make `<vui-avatar>` a squared avatar. It is not real
 squared, it has a `2px` border radius.
 
 {% highlight html %}
-<vui-avatar class="squared"></vui-avatar>
+<vui-avatar class="v-avatar--squared"></vui-avatar>
 {% endhighlight %}
 
 {% raw %}
 <div class="example">
-<vui-avatar class="squared"></vui-avatar>
-<vui-avatar class="squared" alt="Hsiaoming Yang"></vui-avatar>
-<vui-avatar class="squared" alt="李太白"></vui-avatar>
-<vui-avatar class="squared" alt="lepture" src="https://avatars0.githubusercontent.com/u/290496?v=3&s=80"></vui-avatar>
+<vui-avatar class="v-avatar--squared"></vui-avatar>
+<vui-avatar class="v-avatar--squared" alt="Hsiaoming Yang"></vui-avatar>
+<vui-avatar class="v-avatar--squared" alt="李太白"></vui-avatar>
+<vui-avatar class="v-avatar--squared" alt="lepture" src="https://avatars0.githubusercontent.com/u/290496?v=3&s=80"></vui-avatar>
 </div>
 {% endraw %}
 
@@ -75,6 +171,25 @@ so that you can give it a `name` property.
 
 {% raw %}
 <div class="example">
+<vui-toggle name="wifi"></vui-toggle>
+<vui-toggle name="wifi" checked></vui-toggle>
+</div>
+{% endraw %}
+
+### Toggle for iOS
+
+Toggle has a special style for iOS, which looks like the iOS toggle.
+Wrap the toggle under a `.ios` class.
+
+{% highlight html %}
+<div class="ios">
+  <vui-toggle name="wifi"></vui-toggle>
+  <vui-toggle name="wifi" checked></vui-toggle>
+</div>
+{% endhighlight %}
+
+{% raw %}
+<div class="example ios">
 <vui-toggle name="wifi"></vui-toggle>
 <vui-toggle name="wifi" checked></vui-toggle>
 </div>
@@ -130,27 +245,16 @@ specified with `slot` property.
 {% endraw %}
 
 
-## Menu Button
+### Range for iOS
 
-A button designed for menu icon. You can toggle the status with a click.
-The menu button has only one property `checked`.
-
-+ `checked`: is menu button open
+Range has a special style for iOS, which looks like the one in iOS.
 
 {% highlight html %}
-<vui-menu-button></vui-menu-button>
-<vui-menu-button checked></vui-menu-button>
+<vui-range-slider name="power"></vui-range-slider>
 {% endhighlight %}
 
 {% raw %}
-<div class="example">
-<vui-menu-button></vui-menu-button>
-<vui-menu-button checked></vui-menu-button>
+<div class="example ios">
+<vui-range-slider name="power"></vui-range-slider>
 </div>
 {% endraw %}
-
-You can example the menu with an inner text content.
-
-{% highlight html %}
-<vui-menu-button>Site Menu</vui-menu-button>
-{% endhighlight %}
