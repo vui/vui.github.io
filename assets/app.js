@@ -332,7 +332,7 @@ webpackJsonp([0],[
 /* 89 */
 /***/ function(module, exports) {
 
-	module.exports = "<label class=\"v-toggle\" :class=\"{'v-toggle--checked': checked}\">\n<input type=\"checkbox\" v-model=\"checked\" :name=\"name\">\n<div class=\"v-toggle__wrap\">\n  <span class=\"v-toggle__handle\"></span>\n  <div class=\"v-toggle__mask\"></div>\n</div>\n</label>";
+	module.exports = "<label class=\"v-toggle\" :class=\"{'v-toggle--checked': checked}\">\n  <input type=\"checkbox\" v-model=\"checked\" :name=\"name\">\n  <span class=\"v-toggle__handle\"></span>\n</label>";
 
 /***/ },
 /* 90 */
