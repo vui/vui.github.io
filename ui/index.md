@@ -69,7 +69,7 @@ The menu button has only one property `checked`.
 </div>
 {% endraw %}
 
-You can example the menu with an inner text content.
+You can explain the menu with an inner text content.
 
 {% highlight html %}
 <vui-menu-button>Site Menu</vui-menu-button>
@@ -196,6 +196,26 @@ Wrap the toggle under a `.ios` class.
 {% endraw %}
 
 
+### Toggle for Android
+
+Toggle has a special style for Android, which looks like the material
+toggle. Wrap the toggle under a `.android` class.
+
+{% highlight html %}
+<div class="android">
+  <vui-toggle name="wifi"></vui-toggle>
+  <vui-toggle name="wifi" checked></vui-toggle>
+</div>
+{% endhighlight %}
+
+{% raw %}
+<div class="example android">
+<vui-toggle name="wifi"></vui-toggle>
+<vui-toggle name="wifi" checked></vui-toggle>
+</div>
+{% endraw %}
+
+
 ## Range Slider
 
 A customized range input. It will render a standard
@@ -250,11 +270,31 @@ specified with `slot` property.
 Range has a special style for iOS, which looks like the one in iOS.
 
 {% highlight html %}
-<vui-range-slider name="power"></vui-range-slider>
+<div class="ios">
+  <vui-range-slider name="power"></vui-range-slider>
+</div>
 {% endhighlight %}
 
 {% raw %}
 <div class="example ios">
+<vui-range-slider name="power"></vui-range-slider>
+</div>
+{% endraw %}
+
+
+### Range for Android
+
+Range has a special style for Android, which looks like the one in
+Material Design.
+
+{% highlight html %}
+<div class="android">
+  <vui-range-slider name="power"></vui-range-slider>
+</div>
+{% endhighlight %}
+
+{% raw %}
+<div class="example android">
 <vui-range-slider name="power"></vui-range-slider>
 </div>
 {% endraw %}
