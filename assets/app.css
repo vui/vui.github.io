@@ -452,6 +452,10 @@ button.v-menu-button--checked > span {
   width: 100%;
   margin: 10px 0;
 }
+label.v-radio,
+.v-radio label {
+  -webkit-tap-highlight-color: transparent;
+}
 .v-radio {
   vertical-align: middle;
 }
@@ -460,11 +464,13 @@ button.v-menu-button--checked > span {
   margin: 0 8px 0 2px;
   line-height: 1;
   outline: none;
+  border: none;
+  background: none;
+  vertical-align: middle;
 }
 .v-radio input:before {
   position: relative;
-  top: -4px;
-  display: block;
+  display: inline-block;
   content: '';
   width: 1em;
   height: 0.4em;
