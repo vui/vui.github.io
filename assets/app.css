@@ -70,7 +70,7 @@ label.v-toggle--checked.v-toggle {
   position: absolute;
   top: 0;
   font-size: 12px;
-  line-height: 30px;
+  line-height: 28px;
 }
 .v-toggle::before {
   left: 5px;
@@ -156,6 +156,8 @@ button.v-menu-button--checked > span {
   left: 0;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.1);
+  -webkit-transition: width 0.2s;
+          transition: width 0.2s;
 }.v-range-slider {
   display: -webkit-box;
   display: -webkit-flex;
@@ -210,6 +212,123 @@ button.v-menu-button--checked > span {
   height: 2px;
   background: #42b983;
 }/** Toggle */
+.android .v-toggle,
+.android .v-toggle.v-toggle--checked {
+  border: 0;
+  background: transparent;
+  width: 44px;
+}
+.android .v-toggle::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 100%;
+  height: 14px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  -webkit-transition: background 0.15s;
+          transition: background 0.15s;
+}
+.android .v-toggle--checked::before {
+  background: rgba(0, 154, 87, 0.5);
+}
+.android .v-toggle::after {
+  display: none;
+}
+.android .v-toggle .v-toggle__handle {
+  width: 22px;
+  height: 22px;
+  background: #f0f0f0;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.4);
+  -webkit-transition-duration: .15s;
+          transition-duration: .15s;
+}
+.android .v-toggle--checked .v-toggle__handle {
+  -webkit-transform: translate3d(22px, 0, 0);
+          transform: translate3d(22px, 0, 0);
+  background: #009A57;
+}
+.android .v-toggle .v-toggle__handle::before {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  content: '';
+  background: rgba(0, 0, 0, 0);
+  -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+  -webkit-transition: -webkit-transform .15s;
+          transition: transform .15s;
+}
+.android .v-toggle:active .v-toggle__handle::before {
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-transform: scale3d(2.8, 2.8, 2.8);
+          transform: scale3d(2.8, 2.8, 2.8);
+}
+.android .v-toggle--checked:active .v-toggle__handle::before {
+  background: rgba(0, 154, 87, 0.2);
+}
+
+/** Range Slider */
+.android .v-range-slider input::-webkit-slider-thumb:before {
+  background: #009A57;
+  top: 9px;
+}
+.android .v-range-slider input::-webkit-slider-thumb {
+  background: #009A57;
+  border: 0;
+  box-shadow: none;
+  width: 22px;
+  height: 22px;
+  margin-top: -9px;
+}
+
+/** Radio */
+.android .v-radio input {
+  position: relative;
+}
+.android .v-radio input:before {
+  position: static;
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #009A57;
+  opacity: 1;
+  -webkit-transform: scale3d(0, 0, 0);
+          transform: scale3d(0, 0, 0);
+  box-shadow: none;
+  border: 0;
+  -webkit-transition: -webkit-transform 0.15s;
+          transition: transform 0.15s;
+}
+.android .v-radio input:after {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  display: block;
+  content: '';
+  width: 18px;
+  height: 18px;
+  border: 2px solid #5a5a5a;
+  border-radius: 50%;
+  box-sizing: border-box;
+  -webkit-transition: background 0.1s;
+          transition: background 0.1s;
+}
+.android .v-radio input:checked:before {
+  -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+}
+.android .v-radio input:checked:after {
+  border-color: #009A57;
+}
+.android .v-radio li {
+  border: none;
+}
+/** Toggle */
 .ios .v-toggle {
   width: 51px;
 }
@@ -261,42 +380,6 @@ button.v-menu-button--checked > span {
   opacity: 1;
 }
 
-.android .v-toggle,
-.android .v-toggle.v-toggle--checked {
-  border: 0;
-  background: transparent;
-  width: 44px;
-}
-.android .v-toggle::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 4px;
-  width: 100%;
-  height: 14px;
-  border-radius: 10px;
-  background: rgba(0, 0, 0, 0.2);
-  opacity: 1;
-  -webkit-transition: background 0.2s;
-          transition: background 0.2s;
-}
-.android .v-toggle--checked::before {
-  background: rgba(0, 154, 87, 0.5);
-}
-.android .v-toggle::after {
-  display: none;
-}
-.android .v-toggle .v-toggle__handle {
-  width: 22px;
-  height: 22px;
-  background: #f0f0f0;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35), 1px 1px 4px rgba(0, 0, 0, 0.15);
-}
-.android .v-toggle--checked .v-toggle__handle {
-  -webkit-transform: translate3d(22px, 0, 0);
-          transform: translate3d(22px, 0, 0);
-  background: #009A57;
-}
 
 /** Range Slider */
 .ios .v-range-slider input::-webkit-slider-runnable-track {
@@ -310,17 +393,23 @@ button.v-menu-button--checked > span {
   box-shadow: 0 0 1px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,0.2);
 }
 
-.android .v-range-slider input::-webkit-slider-thumb:before {
-  background: #009A57;
-  top: 9px;
+/** Radio Group */
+.ios .v-radio input:before {
+  opacity: 0;
 }
-.android .v-range-slider input::-webkit-slider-thumb {
-  background: #009A57;
-  border: 0;
-  box-shadow: none;
-  width: 22px;
-  height: 22px;
-  margin-top: -9px;
+.ios .v-radio li {
+  border-bottom: 1px solid #ddd;
+  margin-left: 2em;
+  padding: 0.6em 0 0.4em;
+}
+.ios .v-radio li:last-of-type {
+  border-bottom: 0;
+}
+.ios .v-radio li input {
+  margin-left: -2.2em;
+}
+.ios .v-radio input:before {
+  border-color: #027AFB;
 }
 .v-button, button.v-button, a.v-button {
   display: inline-block;
@@ -362,6 +451,50 @@ button.v-menu-button--checked > span {
   display: block;
   width: 100%;
   margin: 10px 0;
+}
+.v-radio {
+  vertical-align: middle;
+}
+.v-radio input {
+  -webkit-appearance: none;
+  margin: 0 8px 0 2px;
+  line-height: 1;
+  outline: none;
+}
+.v-radio input:before {
+  position: relative;
+  top: -4px;
+  display: block;
+  content: '';
+  width: 1em;
+  height: 0.4em;
+  border: 2px solid #666;
+  border-top: 0;
+  border-right: 0;
+  -webkit-transform: rotate3d(0, 0, 1, -45deg);
+          transform: rotate3d(0, 0, 1, -45deg);
+  opacity: 0.18;
+}
+.v-radio input:checked:before {
+  opacity: 1;
+}
+
+/* radio group */
+ul.v-radio {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.v-radio li {
+  border-bottom: 1px solid #ddd;
+  margin-left: 2em;
+  padding: 0.6em 0 0.4em;
+}
+.v-radio li:last-of-type {
+  border-bottom: 0;
+}
+.v-radio li input {
+  margin-left: -2.2em;
 }
 
 /*# sourceMappingURL=app.css.map*/
