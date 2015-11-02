@@ -298,3 +298,103 @@ Material Design.
 <vui-range-slider name="power"></vui-range-slider>
 </div>
 {% endraw %}
+
+
+## Radio
+
+Radio is designed with native `<input type="radio">`, applies a `.v-radio`
+class to change the default browser style.
+
+{% highlight html %}
+<label class="v-radio">
+  <input name="vpn" type="radio">
+  Turn on VPN
+</label>
+{% endhighlight %}
+
+{% raw %}
+<div class="example">
+  <label class="v-radio">
+    <input name="vpn" type="radio">
+    Turn on VPN
+  </label>
+</div>
+{% endraw %}
+
+### Radio as Group
+
+Radio is usually used as a group, apply `.v-radio` on `<ul>` to create
+the radio group.
+
+{% highlight html %}
+<ul class="v-radio">
+  <li>
+    <label>
+      <input name="vpn" type="radio">
+      VPN Japan
+    </label>
+  </li>
+   <li>
+    <label>
+      <input name="vpn" type="radio">
+      VPN Taiwan
+    </label>
+  </li>
+</ul>
+{% endhighlight %}
+
+{% raw %}
+<div class="example">
+  <h4>Default</h4>
+  <ul class="v-radio">
+    <li>
+      <label>
+        <input name="vpn" type="radio">
+        VPN Japan
+      </label>
+    </li>
+    <li>
+      <label>
+        <input name="vpn" type="radio">
+        VPN Taiwan
+      </label>
+    </li>
+  </ul>
+
+<div class="ios">
+  <h4>iOS <code>class="ios"</code></h4>
+  <ul class="v-radio">
+    <li>
+      <label>
+        <input name="vpn" type="radio">
+        VPN America
+      </label>
+    </li>
+    <li>
+      <label>
+        <input name="vpn" type="radio">
+        VPN Singapore
+      </label>
+    </li>
+  </ul>
+</div>
+
+<div class="android">
+  <h4>Android <code>class="android"</code></h4>
+  <ul class="v-radio">
+    <li>
+      <label>
+        <input name="vpn" type="radio">
+        VPN United Kingdom
+      </label>
+    </li>
+    <li>
+      <label>
+        <input name="vpn" type="radio">
+        VPN Hong Kong
+      </label>
+    </li>
+  </ul>
+</div>
+</div>
+{% endraw %}
