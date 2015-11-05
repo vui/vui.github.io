@@ -1,6 +1,6 @@
 ---
 title: UI Components
-layout: vue
+layout: doc
 ---
 
 # UI Components
