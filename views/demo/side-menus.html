@@ -1,0 +1,73 @@
+---
+title: Side Menus
+layout: view
+---
+
+<style>
+  .v-scroll ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  .v-scroll li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+  }
+  .v-scroll li:nth-of-type(2n) {
+    background: #f7f7f7;
+  }
+  .app-content {
+    padding: 10px 20px;
+  }
+</style>
+
+<div id="app">
+  <vui-side-menus :side="sideMenu">
+    <div slot="left-menu">
+      <vui-scroll scrollbars>
+        <ul>
+          <li v-for="menu in menus" v-text="menu"></li>
+        </ul>
+      </vui-scroll>
+    </div>
+    <div class="app-content">
+      <vui-menu-button :checked.sync="openLeft">Left Menu</vui-menu-button>
+    </div>
+  </vui-side-menus>
+</div>
+
+<script>
+  new Vue({
+    el: '#app',
+    data: function() {
+      return {
+        openLeft: false,
+        openRight: false,
+      }
+    },
+    computed: {
+      menus: function() {
+        var i = 1;
+        var values = [];
+        while (i < 90) {
+          values.push('Menu Item ' + i);
+          i += 1;
+        }
+        return values;
+      },
+      sideMenu: function() {
+        if (this.openLeft && this.openRight) {
+          this.openLeft = false;
+          this.openRight = false;
+          return;
+        }
+        if (this.openLeft) {
+          return 'left';
+        }
+        if (this.openRight) {
+          return 'right';
+        }
+      }
+    }
+  })
+</script>

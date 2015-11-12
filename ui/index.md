@@ -398,3 +398,33 @@ the radio group.
 </div>
 </div>
 {% endraw %}
+
+
+## Navbar
+
+{% raw %}
+<div class="example">
+<div class="v-navbar">
+  <vui-menu-button class="v-navbar__left"></vui-menu-button>
+  <div class="v-navbar__title">
+    Nav Title
+  </div>
+  <button class="v-button v-navbar__right v-button--white">
+    Right
+  </button>
+</div>
+</div>
+{% endraw %}
+
+
+## Tabs
+
+{% raw %}
+<div class="example">
+<div class="v-tabs">
+ <a class="v-tabs__item">Home</a>
+ <a class="v-tabs__item">Favorites</a>
+ <a class="v-tabs__item">Settings</a>
+</div>
+</div>
+{% endraw %}
