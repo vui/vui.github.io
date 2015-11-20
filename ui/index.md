@@ -20,7 +20,7 @@ with `.v-button` class.
 {% highlight html %}
 <button class="v-button">Default Button</button>
 <a class="v-button" role="button">A Tag Button</a>
-<button class="v-button v-button--white">White Button</button>
+<button class="v-button v-button--primary">Primary Button</button>
 <button class="v-button" disabled>Disabled Button</button>
 {% endhighlight %}
 
@@ -28,7 +28,7 @@ with `.v-button` class.
 <div class="example">
 <button class="v-button">Default Button</button>
 <a class="v-button" role="button">A Tag Button</a>
-<button class="v-button v-button--white">White Button</button>
+<button class="v-button v-button--primary">Primary Button</button>
 <button class="v-button" disabled>Disabled Button</button>
 </div>
 {% endraw %}
@@ -93,7 +93,7 @@ submition. Create them with `<vui-progress-button>`.
 {% raw %}
 <div class="example">
 <vui-progress-button progress="60%">Text Content</vui-progress-button>
-<vui-progress-button class="v-button--white" progress="60%">Text Content</vui-progress-button>
+<vui-progress-button class="v-button--primary" progress="60%">Text Content</vui-progress-button>
 </div>
 {% endraw %}
 
@@ -101,7 +101,7 @@ You can still add modifier classes for progress buttons, e.g. `.v-button--white`
 `.v-button--block`.
 
 {% highlight html %}
-<vui-progress-button class="v-button--white" progress="60%">
+<vui-progress-button class="v-button--primary" progress="60%">
   Text Content
 </vui-progress-button>
 {% endhighlight %}
@@ -409,7 +409,7 @@ the radio group.
   <div class="v-navbar__title">
     Nav Title
   </div>
-  <button class="v-button v-navbar__right v-button--white">
+  <button class="v-button v-navbar__right">
     Right
   </button>
 </div>
