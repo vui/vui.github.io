@@ -405,11 +405,11 @@ the radio group.
 {% raw %}
 <div class="example">
 <div class="v-navbar">
-  <vui-menu-button class="v-navbar__left"></vui-menu-button>
-  <div class="v-navbar__title">
+  <vui-menu-button class="v-navbar_left"></vui-menu-button>
+  <div class="v-navbar_title">
     Nav Title
   </div>
-  <button class="v-button v-navbar__right">
+  <button class="v-button v-navbar_right">
     Right
   </button>
 </div>
@@ -422,9 +422,9 @@ the radio group.
 {% raw %}
 <div class="example">
 <div class="v-tabs">
- <a class="v-tabs__item">Home</a>
- <a class="v-tabs__item">Favorites</a>
- <a class="v-tabs__item">Settings</a>
+ <a class="v-tabs_item">Home</a>
+ <a class="v-tabs_item">Favorites</a>
+ <a class="v-tabs_item">Settings</a>
 </div>
 </div>
 {% endraw %}
